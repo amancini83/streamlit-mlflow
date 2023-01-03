@@ -18,7 +18,7 @@ This package also features helpers to fetch larger datasets commonly used by the
 - **Diabetes**: Ten baseline variables, age, sex, body mass index, average blood pressure, and six blood serum measurements were obtained for each of n = 442 diabetes patients, as well as the response of interest, a quantitative measure of disease progression one year after baseline.
 - **Wine**: The data is the results of a chemical analysis of wines grown in the same region in Italy by three different cultivators. There are thirteen different measurements taken for different constituents found in the three types of wine.
 
-## Availables models:
+### Availables models:
 
 - We use Iris and Wine datasets for a classification problem. Specifically the PoC support KNN and SVM models.
 - We use Diabetes dataset for a regression problem: predict a quantitative measure of disease progression one year after baseline.
