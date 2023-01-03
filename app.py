@@ -12,7 +12,12 @@ from sklearn.svm import SVC
 def selectbox_without_default(label, options):
     options = [""] + options
     format_func = lambda x: "Select one option" if x == "" else x
-    return st.selectbox(label, options, format_func=format_func)
+    if label == "📋 Choose a dataset":
+        help_str = "Select dataset from a list"
+    else:
+        help_str = "Select ML model from a list"
+
+    return st.selectbox(label, options, format_func=format_func, help=help_str)
 
 
 @st.cache
@@ -64,13 +69,19 @@ def main():
 
     # Feature selection
     feature_options = df.columns.drop("target").tolist()
-    feature_choice = st.multiselect("🏷️ Choose some features", feature_options)
+    feature_choice = st.multiselect(
+        "🏷️ Choose some features",
+        feature_options,
+        help="Select relevant features for your model",
+    )
 
     # Mlflow tracking
-    track_with_mlflow = st.checkbox("📈 Track with mlflow? ")
+    track_with_mlflow = st.checkbox(
+        "📈 Track with mlflow? ", help="Mark to track experiment with MLflow"
+    )
 
     # Model training
-    start_training = st.button("💪 Start training")
+    start_training = st.button("💪 Start training", help="Train and evaluate ML model")
     if not start_training:
         st.stop()
 
