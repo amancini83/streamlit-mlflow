@@ -41,4 +41,5 @@ This package also features helpers to fetch larger datasets commonly used by the
   - Open http://localhost:5000 to access the mlflow user interface.
 
 - **Step 3:** What to expect?
+
   ![Alt Text](demo.gif)
