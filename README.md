@@ -23,7 +23,9 @@ This package also features helpers to fetch larger datasets commonly used by the
 - We use Iris and Wine datasets for a classification problem. Specifically the PoC support KNN and SVM models.
 - We use Diabetes dataset for a regression problem: predict a quantitative measure of disease progression one year after baseline.
 
-**Keep in mind: models performance are not the key objective, we are only interested in streamlit & MLFlow integration!**
+> **Note**
+>
+> Model performance are not the key objective, we are only interested in streamlit & MLFlow integration!
 
 ## How to use?
 
